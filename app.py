@@ -47,17 +47,29 @@ with st.container():
        st.header("An owl")
        st.image("https://static.streamlit.io/examples/owl.jpg")
 
-#--- 2 COLUMNS like Blog Postings ---
+#--- 2 COLUMNS như Blog Postings ---
 with st.container():
     col1, col2 = st.columns((1,2))
     with col1:
        st.image("https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1713528071/whnuihuknsylm6iy1m93.webp")
     with col2:
-       st.header("Tất Tần Tật Kinh Nghiệm Du Lịch Ở Phuket Thái Lan Mà Bạn Chưa Biết")
+       st.subheader("Tất Tần Tật Kinh Nghiệm Du Lịch Ở Phuket Thái Lan Mà Bạn Chưa Biết")
        st.write(
            """
             Tất Tần Tật Kinh Nghiệm Du Lịch Ở Phuket Thái Lan Mà Bạn Chưa Biết.         
             [Xem thêm](https://haidangtravel.com/tin-tuc/phuket-thai-lan)
+           """
+       )         
+with st.container():
+    col1, col2 = st.columns((1,2))
+    with col1:
+       st.image("https://haidangtravel.com/image/Top-8-Cho-Noi-Thai-Lan-duoc-Du-Khach-Du-Lich-Ghe-den-den-Nhieu-Nhat-hinh-1.jpg")
+    with col2:
+       st.subheader("Khám Phá Đảo Koh Phi Phi - Thiên Đường Nghỉ Dưỡng Tại Thái Lan")
+       st.write(
+           """
+            Khám Phá Đảo Koh Phi Phi - Thiên Đường Nghỉ Dưỡng Tại Thái Lan.         
+            [Xem thêm](https://haidangtravel.com/tin-tuc/dao-koh-phi-phi)
            """
        )         
 
