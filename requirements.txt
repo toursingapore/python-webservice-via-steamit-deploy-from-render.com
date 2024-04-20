@@ -1,3 +1,5 @@
 streamlit
+streamlit-lottie #https://github.com/andfanilo/streamlit-lottie
+streamlit-pages #https://github.com/bvenkatesh-ai/streamlit_pages
 pillow==9.2.0
 requests==2.31.0
