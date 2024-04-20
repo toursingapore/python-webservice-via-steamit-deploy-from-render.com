@@ -26,9 +26,9 @@ def load_lottieurl(url: str):
 
 lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
 
-#--- COLUMNS ---
+#--- 3 COLUMNS ---
 with st.container():
-    col1, col2, col3 = st.columns((1,2,3))
+    col1, col2, col3 = st.columns(3)
     with col1:
        st.header("A cat")
        st.image("https://static.streamlit.io/examples/cat.jpg")
@@ -46,6 +46,20 @@ with st.container():
     with col3:
        st.header("An owl")
        st.image("https://static.streamlit.io/examples/owl.jpg")
+
+#--- 2 COLUMNS like Blog Postings ---
+with st.container():
+    col1, col2 = st.columns((1,2))
+    with col1:
+       st.image("https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_400,h_260/v1713528071/whnuihuknsylm6iy1m93.webp")
+    with col2:
+       st.header("Tất Tần Tật Kinh Nghiệm Du Lịch Ở Phuket Thái Lan Mà Bạn Chưa Biết")
+       st.write(
+           """
+            Tất Tần Tật Kinh Nghiệm Du Lịch Ở Phuket Thái Lan Mà Bạn Chưa Biết.         
+            [Xem thêm](https://haidangtravel.com/tin-tuc/phuket-thai-lan)
+           """
+       )         
 
 #--- MARKDOWN convert to HTML website ---
 """
