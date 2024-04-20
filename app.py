@@ -1,7 +1,7 @@
 import streamlit as st
 st.set_page_config(
     page_title="This is my page title",
-    page_icon="",
+    page_icon=":smiling_face_with_sunglasses:", #get icon from https://www.webfx.com/tools/emoji-cheat-sheet/
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
