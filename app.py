@@ -28,7 +28,7 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9
 
 #--- COLUMNS ---
 with st.container():
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns((1,2,3))
     with col1:
        st.header("A cat")
        st.image("https://static.streamlit.io/examples/cat.jpg")
