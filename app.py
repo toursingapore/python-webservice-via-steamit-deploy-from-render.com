@@ -21,16 +21,27 @@ with st.container():
     with col1:
        st.header("A cat")
        st.image("https://static.streamlit.io/examples/cat.jpg")
-    
+       st.write(
+           """
+            Make Money Online using Python + Streamlit
+            ==========================================
+            
+            Learn how to make money online using Python! In this video, you will see how to create a website using Streamlit and sell digital products. To collect the payment, we will be using Stripe. You do not need HTML, CSS or Javascript knowledge to make the website.
+            
+            Live Demo
+            ---------
+            
+            [Xem thêm](https://mytoolbelt.onrender.com/)
+           """
+       ) 
     with col2:
        st.header("A dog")
-       st.image("https://static.streamlit.io/examples/dog.jpg")
-    
+       st.image("https://static.streamlit.io/examples/dog.jpg")    
     with col3:
        st.header("An owl")
        st.image("https://static.streamlit.io/examples/owl.jpg")
 
-#--- This markdown for showing html website ---
+#--- MARKDOWN convert to HTML website ---
 """
 # This is my login form
 
