@@ -1,15 +1,6 @@
 import streamlit as st
-st.set_page_config(
-    page_title="This is my page title",
-    page_icon=":smiling_face_with_sunglasses:", #get icon from https://www.webfx.com/tools/emoji-cheat-sheet/
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Contact': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
+
+st.set_page_config(page_title="This is my Page title", page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 with st.container():
     st.title("This is a title header H1")
