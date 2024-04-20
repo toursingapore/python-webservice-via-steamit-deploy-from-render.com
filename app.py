@@ -2,6 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="This is my Page title", page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 
+#--- HEADERS ---
 with st.container():
     st.title("This is a title header H1")
     st.header("This is a header H2")
@@ -14,7 +15,22 @@ with st.container():
     st.write("hello world")
     st.write("[>>Xem thêm](https://markdowntohtml.com)")
 
-#This markdown for showing html website
+#--- COLUMNS ---
+with st.container():
+    col1, col2, col3 = st.columns(3)
+    with col1:
+       st.header("A cat")
+       st.image("https://static.streamlit.io/examples/cat.jpg")
+    
+    with col2:
+       st.header("A dog")
+       st.image("https://static.streamlit.io/examples/dog.jpg")
+    
+    with col3:
+       st.header("An owl")
+       st.image("https://static.streamlit.io/examples/owl.jpg")
+
+#--- This markdown for showing html website ---
 """
 # This is my login form
 
@@ -25,6 +41,7 @@ In this form will collect info following as below
 
 _We do not sell these data_
 """
+
 name = st.text_input("Enter your name")
 if name:
     st.write(f"your name is {name}")
@@ -60,3 +77,6 @@ if mySelectbox:
 myMultiselect = st.multiselect('choose a planet',['Jupiter', 'Mars', 'neptune'])
 if myMultiselect:
     st.write(f"Seleted {myMultiselect}")
+
+HTMLcode = '<iframe width="560" height="315" src="https://www.youtube.com/embed/VqgUkExPvLY?si=AhRA4pAkjbWduMDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+st.components.v1.html(HTMLcode, width=None, height=None, scrolling=False)
