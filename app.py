@@ -17,7 +17,7 @@ with st.container():
     st.write("hello world")
     st.write("[>>Xem thêm](https://markdowntohtml.com)")
 
-#--- FUNC LOAD ANIMATION IMAGE FROM lottie ---
+#--- FUNC LOAD ANIMATION IMAGE FROM lottie - source https://github.com/andfanilo/streamlit-lottie ---
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -73,9 +73,29 @@ with st.container():
            """
        )         
 
+#--- CONTACT FORM - source https://formsubmit.co/ ---
+with st.container():
+    st.write("---")
+    st.subheader("Contact Us")
+    contact_from = """
+        <form action="https://formsubmit.co/singaporetour39@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Thank you for your message">            
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message here" rows="4" cols="50"></textarea>             
+             <button type="submit">Send</button>
+        </form>        
+    """
+    col1, col2 = st.columns(2)
+    with col1:
+       st.markdown(contact_from, unsafe_allow_html=False) 
+    with col2:
+       st.empty() 
+
 #--- MARKDOWN convert to HTML website ---
 """
-# This is my login form
+# This is a survey form
 
 In this form will collect info following as below
 * Name
