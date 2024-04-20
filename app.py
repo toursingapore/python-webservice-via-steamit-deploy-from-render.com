@@ -1,4 +1,6 @@
 import streamlit as st
+from streamlit_lottie import st_lottie
+import requests
 
 st.set_page_config(page_title="This is my Page title", page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
 
@@ -15,6 +17,15 @@ with st.container():
     st.write("hello world")
     st.write("[>>Xem thêm](https://markdowntohtml.com)")
 
+#--- FUNC LOAD ANIMATION IMAGE FROM lottie ---
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_V9t630.json")
+
 #--- COLUMNS ---
 with st.container():
     col1, col2, col3 = st.columns(3)
@@ -23,20 +34,15 @@ with st.container():
        st.image("https://static.streamlit.io/examples/cat.jpg")
        st.write(
            """
-            Make Money Online using Python + Streamlit
-            ==========================================
-            
-            Learn how to make money online using Python! In this video, you will see how to create a website using Streamlit and sell digital products. To collect the payment, we will be using Stripe. You do not need HTML, CSS or Javascript knowledge to make the website.
-            
-            Live Demo
-            ---------
-            
+            ### Make Money Online using Python + Streamlit            
+            Learn how to make money online using Python! In this video, you will see how to create a website using Streamlit and sell digital products. To collect the payment, we will be using Stripe. You do not need HTML, CSS or Javascript knowledge to make the website.         
             [Xem thêm](https://mytoolbelt.onrender.com/)
            """
        ) 
     with col2:
        st.header("A dog")
-       st.image("https://static.streamlit.io/examples/dog.jpg")    
+       st.image("https://static.streamlit.io/examples/dog.jpg")
+       st_lottie(lottie_coding, height=300, key="my-coding")
     with col3:
        st.header("An owl")
        st.image("https://static.streamlit.io/examples/owl.jpg")
