@@ -6,20 +6,22 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'Contact': "https://www.extremelycoolapp.com/bug",
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
 
-st.title("This is a title header H1")
-st.header("This is a header H2")
-st.subheader("This is a subheader H3")
-st.caption("This is a caption")
-#st.image("kid.jpg")
-#st.audio("audio.mp3")
-#st.video("video.mp4")
-st.code("x=2021")
-st.write("hello world")
+with st.container():
+    st.title("This is a title header H1")
+    st.header("This is a header H2")
+    st.subheader("This is a subheader H3")
+    st.caption("This is a caption")
+    #st.image("kid.jpg")
+    #st.audio("audio.mp3")
+    #st.video("video.mp4")
+    st.code("x=2021")
+    st.write("hello world")
+    st.write("[>>Xem thêm](https://markdowntohtml.com)")
 
 #This markdown for showing html website
 """
