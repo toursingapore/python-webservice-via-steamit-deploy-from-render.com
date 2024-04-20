@@ -1,4 +1,16 @@
 import streamlit as st
+st.set_page_config(
+    page_title="This is my page title",
+    page_icon="",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 st.title("This is a title header H1")
 st.header("This is a header H2")
 st.subheader("This is a subheader H3")
