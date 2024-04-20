@@ -1,4 +1,4 @@
 streamlit
-streamlit-lottie
+streamlit-lottie #source: https://github.com/andfanilo/streamlit-lottie
 pillow==9.2.0
 requests==2.31.0
